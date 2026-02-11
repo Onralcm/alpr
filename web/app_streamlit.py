@@ -40,10 +40,10 @@ colL, colR = st.columns([1, 1], gap="large")
 with colL:
     st.subheader("Input")
     uploaded = st.file_uploader("Choose a JPG/PNG", type=["jpg", "jpeg", "png"])
-    run = st.button("Recognize", type="primary", use_container_width=True, disabled=(uploaded is None))
+    run = st.button("Recognize", type="primary", width="stretch", disabled=(uploaded is None))
 
     if uploaded is not None:
-        st.image(uploaded, caption="Uploaded image", use_container_width=True)
+        st.image(uploaded, caption="Uploaded image", width="stretch")
 
 with colR:
     st.subheader("Result")
@@ -86,7 +86,7 @@ with colR:
             with tabs[0]:
                 b64 = data.get("bbox_image_b64", "")
                 if b64:
-                    st.image(base64.b64decode(b64), use_container_width=True)
+                    st.image(base64.b64decode(b64), width="stretch")
                 else:
                     st.info("No overlay image returned.")
 
