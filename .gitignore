@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env
+
+# Conda
+.env/
+venv/
+alpr/
+*.yaml
+
+# Models
+weights/
+*.pt
+*.pth
+
+# PaddleOCR cache
+.paddleocr/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit cache
+.streamlit/
+
+# Images
+samples/
